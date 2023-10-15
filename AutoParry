@@ -105,7 +105,7 @@ ballsFolder.ChildAdded:Connect(function()
                 task.wait(0)
                 usedRemote = true
             elseif timeToReachPlayer > 0 then
-                usedRemote = false
+                usedRemote = true
             end
         end)
     end
