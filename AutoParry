@@ -100,12 +100,12 @@ ballsFolder.ChildAdded:Connect(function()
             local timeToReachPlayer = predictedDistance / (currentSpeed == 0 and 1 or currentSpeed)
             print(timeToReachPlayer)
 
-            if timeToReachPlayer <= 0.6 and not usedRemote then
+            if timeToReachPlayer <= 0.7 and not usedRemote then
                 game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ParryButtonPress"):Fire()
                 task.wait(0)
                 usedRemote = true
-            elseif timeToReachPlayer > 0 then
-                usedRemote = true
+            elseif timeToReachPlayer > 0.3then
+                usedRemote = false
             end
         end)
     end
