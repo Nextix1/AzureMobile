@@ -104,7 +104,7 @@ ballsFolder.ChildAdded:Connect(function()
                 game:GetService("ReplicatedStorage"):WaitForChild("Remotes", 9e9):WaitForChild("ParryButtonPress"):Fire()
                 task.wait(0)
                 usedRemote = true
-            elseif timeToReachPlayer > 0.3 then
+            elseif timeToReachPlayer > 0.1 then
                 usedRemote = false
             end
         end)
